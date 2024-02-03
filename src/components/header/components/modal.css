@@ -1,0 +1,14 @@
+:where(.css-dev-only-do-not-override-24ofv4).ant-modal .ant-modal-title {
+    margin: 0;
+    color: rgba(0, 0, 0, 0.88);
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    line-height: 1.5;
+    border-bottom: 1px solid #e0dbdb;
+  }
+
+.create-pub{
+    display: grid;
+    gap: 10px;
+}

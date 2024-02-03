@@ -1,0 +1,301 @@
+.App{
+    height: 100vh;
+    background-color: var(--pinky-c2);
+    display: grid;
+    place-content: center;
+
+    
+    .container{
+        position: relative;
+        width: 858px;
+        height: 500px;
+        background: #fff;
+        border-radius: 14px;
+    }
+    .form-container{
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        padding: 0 40px;
+        transition: all 0.6s ease-in-out;
+    }
+    .sign-up-container{
+        opacity: 0;
+        z-index: 1;
+    }
+    .sign-in-container{
+        z-index: 2;
+    }
+    form{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0 50px;
+    }
+    h1{
+        color: var(--tiktok);
+        white-space: nowrap;
+    }
+    .social-container{
+        margin: 20px 0px;
+    }
+    .social-container a{
+        border: 1px solid #ddd;
+        border-radius: 50%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 5px;
+        height: 40px;
+        width: 40px;
+        font-weight: bold;
+        transition: 0.3s all ease-in;
+    }
+    .social-container a > i{
+        font-weight: 500;
+    }
+    .social-container a:hover{
+        background-color: var(--tiktok);
+    }
+    span{
+        font-size: 12px;
+    }
+    .infield{
+        position: relative;
+        margin: 8px 0;
+        width: 100%;
+    }
+    /* input{
+        width: 100%;
+        padding: 12px 15px;
+        background-color: #f3f3f3;
+        border: none;
+        outline: none;
+    } */
+    /* label{
+        position: absolute;
+        left: 50%;
+        top: 100%;
+        transform: translateX(-50%);
+        width: 0%;
+        height: 2px;
+        background: var(--grad-c1);
+        transition: 0.3s;
+    } */
+    a{
+        color: #333;
+        font-size: 14px;
+        text-decoration: none;
+        margin: 15px 0;
+    }
+    
+    a.forgot-password{
+        padding-bottom: 3px;
+        margin-top: 20px;
+        border-bottom: 2px solid #eee;
+        transition: 0.2s all ease-in;
+        color: #333;
+        font-size: 14px;
+        text-decoration: none;
+        margin: 15px 0;
+    
+    }
+    span.create-account{
+        color: #333;
+        font-size: 14px;
+        text-decoration: none;
+        margin: 15px 0;
+        padding-bottom: 3px;
+        margin-top: 20px;
+        border-bottom: 2px solid #eee;
+        transition: 0.2s all ease-in;  
+        color: var(--tiktok); 
+        cursor: pointer;
+    }
+    .create-account:hover{
+        color: #333;
+    }
+    .action{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    
+    .forgot-password:hover{
+        color: var(--tiktok);
+    }
+    button{
+        border-radius: 20px;
+        border: none;
+        background-color: var(--tiktok);
+        /* background-color: #333; */
+        color: #fff;
+        font-size: 12px;
+        font-weight: bold;
+        padding: 12px 43px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+    .form-container button{
+        margin-top: 17px;
+        transition: 0.3s ease-in;
+    }
+    .form-container button:hover{
+        background-color: #fff;
+        color: var(--tiktok);
+        border: 1px solid var(--tiktok);
+    }
+    .input-container{
+        display: flex;
+        width: 100%;
+        padding: 0 10px;
+        /* padding: 12px 15px; */
+        background-color: #f3f3f3;
+        border: none;
+        outline: none;
+        align-items: center;
+        /* gap: 12px; */
+        
+    }
+    .inputs{
+        display: grid;
+        gap: 13px;
+        margin-top: 10px;
+        width: 100%;
+    }
+    .input{
+        background: transparent;
+        height: 100%;
+        width: 100%;
+        padding: 10px;
+        display: block;
+        border: none;
+    }
+    .input:focus{
+        outline: none;
+    }
+    .icon{
+        width: 21px;
+    }
+    .active-creat-compte{
+        left: 75% !important;
+    }
+    .overlay-container{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 50%;
+        height: 100%;
+        overflow: hidden;
+        transition: 0.6s ease-in-out;
+        z-index: 9;
+    }
+    .mario{
+        display: block;
+        height: 100%;
+        width: 100%;
+        border-radius: 14px;
+    }
+
+    #overlayBtn{
+        cursor: pointer;
+        position: absolute;
+        left: 50%;
+        top: 300px;
+        transform: translate(-50%);
+        width: 154px;
+        height: 39px;
+        border: none;
+        /* background: rgb(73, 4, 4); */
+        background: transparent;
+        border-radius: 20px;
+    }
+    .overlay {
+        position: relative;
+        /* background: var(--vert); */
+        left: -137%;
+        height: 100%;
+        width: 250%;
+        transition: transform 0.6s ease-in-out;
+    }
+    .overlay-panel{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 40px;
+        text-align: center;
+        height: 100%;
+        width: 340px;
+        transition: transform 0.6s ease-in-out;
+    }
+    .overlay-left{
+        right: 50%;
+        transform: translateX(-12%);
+        width: 50%;
+    }
+    .overlay-right{
+        right: 0;
+        width: 50%;
+        transform: translateX(-2.5%);
+    }
+    .overlay-panel h1{
+        color: #fff;
+    }
+    .overlay-right p{
+        color: #fff;
+    }
+    p{
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 20px;
+        letter-spacing: 0.5px;
+        margin: 25px 0px 35px;
+        color: #fff;
+    }
+    .overlay-panel button{
+        border: 1px solid;
+        /* etooooooo */
+        /* background-color: #141e30; */
+    }
+    .right-panel-active .overlay-container{
+        transform: translateX(-150%);
+    }
+    .right-panel-active .overlay{
+        transform: translateX(50%);
+    }
+    .right-panel-active .overlay-left{
+        transform: translateX(2%);
+        width: 50%;
+    }
+    .right-panel-active .overlay-right {
+        transform: translateX(35%);
+    }
+    .right-panel-active .sign-in-container {
+        transform: translateX(20%);
+        opacity: 0;
+    }
+    .right-panel-active .sign-up-container {
+        right: 0;
+        opacity: 1;
+        z-index: 5;
+        animation: show 0.6s;
+    }
+    
+}
+@keyframes show {
+    0%,
+    50% {
+        opacity: 0;
+        z-index: 1;
+    }
+    50.1%,
+    100% {
+        opacity: 1;
+        z-index: 5;
+    }
+}

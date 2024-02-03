@@ -1,0 +1,25 @@
+.home {
+    min-height: 100vh;
+    background: var(--pinky-c3);
+    .main-center{
+      overflow: hidden;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: 22% 1fr 22%;
+      gap: 20px;
+      padding: 15px 7px;
+      min-height: 100vh;
+      padding-top: 90px;
+    }
+    .edit{
+      width: 20px;
+      height: 20px;
+  
+    }
+    .float-btn *{
+      background: transparent !important;
+    }
+  
+}
+  

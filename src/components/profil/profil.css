@@ -1,0 +1,81 @@
+.profile-page {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  display: grid;
+  gap: 20px;
+  .head-profil {
+    display: flex;
+    gap: 48px;
+    align-items: center;
+  }
+  .user-photo-profil {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+ 
+  .user-photo-profil img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+  }
+  .user-follower-container {
+    display: grid;
+    gap: 20px;
+    align-items: center;
+  }
+  .name-user span{
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .container-detail{
+    display: flex;
+    gap: 30px;
+  }
+  .detail-user-profil {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  .post-name-profil{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .detail-user-profil .number {
+    font-weight: 700;
+    font-size: 17px;
+  }
+  .button-container {
+    display: flex;
+    gap: 20px;
+  }
+  .button-container button {
+    width: 170px;
+    height: 38px;
+    font-size: 15.5px;
+    color: #fff;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 9px;
+    border: none;
+    background: var(--tiktok);
+    transition: 0.5s ease;
+  }
+
+.button-container .btn2 {
+  color: var(--tiktok);
+  background: #fff;
+  border: 1px solid var(--tiktok);
+}
+.button-container .btn2:hover{
+    background: var(--tiktok);
+    color: #fff;
+}
+.button-container button:hover {
+  color: var(--tiktok);
+  background: #fff;
+  border: 1px solid var(--tiktok);
+}
+}

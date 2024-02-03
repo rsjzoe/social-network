@@ -1,0 +1,63 @@
+:where(.css-dev-only-do-not-override-24ofv4).ant-drawer-left
+  > .ant-drawer-content-wrapper {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  box-shadow: none;
+}
+:where(.css-dev-only-do-not-override-24ofv4).ant-drawer
+  .ant-drawer-header-title {
+  display: flex;
+  flex: 1;
+  text-align: center;
+  align-items: center;
+  min-width: 0;
+  min-height: 0;
+}
+
+.notif-side-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.notif-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.notif-container span {
+  font-size: 14px;
+  font-weight: bold;
+}
+.notif-container p {
+  margin-left: -5px;
+  font-size: 12px;
+}
+.notif-container img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.notif-container button {
+  width: 55px;
+  height: 32px;
+  /* color: #fff; */
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  border: 1px solid var(--tiktok);
+  color: var(--tiktok);
+  background: #fff;
+
+  /* background: var(--tiktok); */
+  transition: 0.5s ease;
+}
+.notif-container button:hover {
+  /* color: var(--tiktok); */
+  color: #fff;
+  background: var(--tiktok);
+  /* background: #fff; */
+  /* border: 1px solid var(--tiktok); */
+}

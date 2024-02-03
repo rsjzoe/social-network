@@ -1,0 +1,109 @@
+.home {
+  .side-left-fixed{
+    background: #fff;
+    border-radius: 10px;
+    position: fixed;
+    width: 22%;
+    height: 100%;
+  }
+  .user {
+    display: grid;
+    padding: 37px;
+    justify-content: center;
+    gap: 15px;
+  }
+  .user-profil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  .user-img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+  }
+  .follow-container {
+    display: flex;
+    gap: 47px;
+  }
+  .follow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+  .list-container {
+    /* margin-top: 40px; */
+    padding: 15px;
+    display: grid;
+    gap: 20px;
+
+    transition: 0.5s ease;
+  }
+  .list {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 8px;
+    cursor: pointer;
+  }
+  .list-container img {
+    width: 27px;
+    height: 27px;
+  }
+  .list-container .list:hover {
+    /* background: rgba(250, 30, 74, 0.2); */
+    background: #ffefed95;
+    border-radius: 10px;
+  }
+  .log-out{
+    background-color: var(--tiktok);
+    border-radius: 10px;
+    position: absolute;
+    bottom: 100px;
+    height: 36px;
+    width: 90%;
+    left:5%;
+    transition: .4s ease;
+    
+  }
+  .log-out img{
+    width: 25px;
+    height: 25px;
+  }
+  .btn{
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+  }
+  .log-out:hover{
+    transform: scale(1.02);
+    background: var(--tiktok) !important;
+  }
+  .span-input {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .span-input input{
+    width: 100%;
+  }
+  input{
+    padding: 10px;
+    border: none;
+    background: #ffedeb;
+    border-radius: 5px;  
+  }
+  input:focus{
+    outline: none;
+  }
+  .close {
+    width: 80px;
+    height: 80px;
+  }
+  .span-search{
+    width: 100%;
+  }
+}

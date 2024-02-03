@@ -1,0 +1,27 @@
+.posts{
+    background: #fff;
+    border-radius: 10px;
+    padding: 37px;
+    margin-top: 15px;
+}
+.no-posts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.no-posts img{
+    width: 70px;
+    height: 70px;
+}
+.img-circle{
+    padding: 9px;
+    border: 3px solid var(--tiktok);
+    border-radius: 50%;
+}
+.no-posts span{
+    font-weight: 800;
+    font-size: 20px;
+}

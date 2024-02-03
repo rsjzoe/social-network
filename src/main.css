@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-size: 17px; */
+    /* overflow: hidden; */
+}
+:root{
+    --vert : #3aafa0;
+    --grad-c1: #141e30;
+    --pinky-c1: #f0a694;
+    --pinky-c2: #ffefed;
+    --pinky-c3:#ffedeb;
+    --tiktok:#fe2c55;
+    --hover : #ffefed95;
+
+}
+html::-webkit-scrollbar {
+    width: .6rem;
+    /* color: #ffc300; */
+}
+
+html::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--tiktok);
+    /* height: 10rem; */
+    border-radius: 5rem;
+}
+
+#root{
+    border-radius: 14px;
+    box-shadow: 25px 30px 55px rgba(78, 77, 77, 0.10);
+}
+body{
+    font-family: "poppins", sans-serif;    
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}

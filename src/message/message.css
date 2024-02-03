@@ -1,0 +1,66 @@
+.messages {
+  border-radius: 10px;
+  background: #fff;
+  padding: 20px;
+  margin-top: 15px;
+  .title {
+    font-size: 19px;
+    font-weight: bold;
+  }
+  .title-container{
+    display: flex;
+    justify-content: space-between;
+  }
+  .title-container img{
+    width: 25px;
+    height: 25px;
+}
+  .profil-msg{
+    width: 50px;
+    height: 50px;
+    border-radius: 9999px;
+
+  }
+  .list-messages .name{
+    font-weight: bold;
+  }
+  .list-messages{
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+    align-items: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding: 6px;
+    text-decoration: none;
+  }
+  .name-user p{
+    white-space: nowrap;
+    
+  }
+  .name-user .name{
+    color: #000;
+  }
+  .number-msg{
+    color: #fff;
+    border-radius: 50%;
+    background: var(--tiktok);
+    font-size: 12px;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .msg{
+    display: flex;
+    gap: 5px;
+  }
+  .msg p{
+    color: rgb(106, 105, 105);
+  }
+  .list-messages:hover{
+    background: var(--hover);
+    border-radius: 12px;
+  }
+}

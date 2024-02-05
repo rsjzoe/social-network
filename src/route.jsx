@@ -8,6 +8,7 @@ import { Accueil } from "./Accueil/Accueil";
 import { Message } from "./message/message";
 import { Chatbox } from "./chatBox/chatbox";
 import { Profil } from "./components/profil/profil";
+import { ProfilOther } from "./components/otherUser/profilOther";
 
 export const route = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ export const route = createBrowserRouter([
       {
         path: "profil",
         element: <Profil/>
+      },
+      {
+        path: "otherUser",
+        element: <ProfilOther/>
       }
 
     ],

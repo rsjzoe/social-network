@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export function SeConnecter({age,  onclick}) {
+export function SeConnecter({ age, onclick }) {
   return (
     <>
       <div className="form-container sign-in-container">
@@ -8,13 +8,13 @@ export function SeConnecter({age,  onclick}) {
           <h1>Login Now</h1>
           <div className="social-container">
             <a href="#" className="social">
-              <i className="fab fa-facebook-f"></i>
+              <img src="facebook-svgrepo-com.svg" />
             </a>
-            <a href="#" className="social">
-              <i className="fab fa-instagram"></i>
+            <a href="#" className="social google">
+              <img src="google-svgrepo-com.svg" />
             </a>
-            <a href="#" className="social">
-              <i className="fab fa-google-plus-g"> </i>
+            <a href="#" className="social insta">
+              <img src="instagram-svgrepo-com.svg" />
             </a>
           </div>
           <span>or use your account</span>
@@ -30,24 +30,24 @@ export function SeConnecter({age,  onclick}) {
             </div>
             <div className="input-container">
               <img className="icon" src="lock.svg" />
-              <input
-                type="password"
-                placeholder="Password"
-                className="input"
-              />
+              <input type="password" placeholder="Password" className="input" />
             </div>
           </div>
           <div className="action">
             <a href="#" className="forgot-password">
               forgot?
             </a>
-            <span onClick={() =>{onclick()}} className="create-account">
+            <span
+              onClick={() => {
+                onclick();
+              }}
+              className="create-account"
+            >
               Create account
             </span>
           </div>
 
-          <Link to='/'>
-            
+          <Link to="/">
             <button type="button">Login</button>
           </Link>
         </form>

@@ -6,9 +6,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Layout } from "./components/layout/layout";
 import { Accueil } from "./Accueil/Accueil";
 import { Message } from "./message/message";
+import {Profil} from "./profil/profil";
 import { Chatbox } from "./chatBox/chatbox";
-import { Profil } from "./components/profil/profil";
-import { ProfilOther } from "./components/otherUser/profilOther";
+import { ProfilOther } from "./profil/otherUser/profilOther";
 
 export const route = createBrowserRouter([
   {

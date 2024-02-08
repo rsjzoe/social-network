@@ -38,7 +38,7 @@ export function SideLeft(props) {
             </div>
           </Link>
           <div className="list-container">
-            <Search/>
+            <Search />
             <div
               className="list"
               onClick={() => {
@@ -55,7 +55,10 @@ export function SideLeft(props) {
               />
               <span>{isDarkModeActive ? "Light mode" : "Dark Mode"}</span>
             </div>
-
+            <div className="list">
+              <img src="setting-svgrepo-com.svg" alt="" />
+              <span>Settings</span>
+            </div>
             <Button
               type="primary"
               icon={<PoweroffOutlined size={50} />}

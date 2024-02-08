@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 export function CreerCompte({ onclick }) {
-  const [compteur, setCompteur] = useState(0);
   return (
     <>
       {" "}
@@ -10,13 +9,13 @@ export function CreerCompte({ onclick }) {
           <h1>Create Account</h1>
           <div className="social-container">
             <a href="#" className="social">
-              <i className="fab fa-facebook-f"></i>
+            <img src="facebook-svgrepo-com.svg"/>
             </a>
-            <a href="#" className="social">
-              <i className="fab fa-instagram"></i>
+            <a href="#" className="social google">
+            <img src="google-svgrepo-com.svg"/>
             </a>
-            <a href="#" className="social">
-              <i className="fab fa-google-plus-g"> </i>
+            <a href="#" className="social instagram">
+            <img src="instagram-svgrepo-com.svg"/>
             </a>
           </div>
           <span>or your email for inscription</span>

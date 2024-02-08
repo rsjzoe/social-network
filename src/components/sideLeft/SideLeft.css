@@ -8,7 +8,7 @@
   }
   .user {
     display: grid;
-    padding: 37px;
+    padding: 30px;
     justify-content: center;
     gap: 15px;
   }
@@ -37,7 +37,7 @@
     /* margin-top: 40px; */
     padding: 15px;
     display: grid;
-    gap: 20px;
+    gap: 9px;
 
     transition: 0.5s ease;
   }

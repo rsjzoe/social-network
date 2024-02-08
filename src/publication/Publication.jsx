@@ -1,6 +1,5 @@
-// import "./Publication.css";
-import { PostUser } from "../components/otherUser/components/postUser";
-
+import { PostUser } from "../components/postUser/postUser";
+import "./Publication.css"
 export function Publication(props) {
   return (
     <>

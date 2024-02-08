@@ -9,6 +9,7 @@ export function Header(props) {
   const [navActive, setNavActive] = useState("home");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [open, setOpen] = useState(false);
+  
   return (
     <>
       <header className="">
@@ -37,7 +38,7 @@ export function Header(props) {
             }}
           />
           <NavItem
-            src={"/notification-svgrepo-com.svg"}      
+            src={"/notification-svgrepo-com.svg"}
             compteur={"9+"}
             onclick={() => {
               setOpen(true);
@@ -51,11 +52,11 @@ export function Header(props) {
             }}
           />
         </div>
-        
+
         <Link to={"profil"} className="profil">
           <span>
             <p>Rsj_zoe</p>
-            <img src="/image/photo3.png" alt="" />
+            <img src="/image/phone.png" alt="" />
           </span>
         </Link>
       </header>
@@ -67,7 +68,7 @@ export function Header(props) {
           }}
         />
       </div>
-      
+
       <div className="side-notification">
         <Notification
           onClose={() => {

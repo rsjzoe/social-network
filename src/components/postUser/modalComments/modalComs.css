@@ -1,0 +1,61 @@
+.coms-container {
+  display: flex;
+  /* align-items: center; */
+  gap: 15px;
+  padding: 15px;
+}
+.coms-container img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.commentaire span {
+  font-size: 15px;
+  font-weight: 600;
+}
+.commentaire {
+  background: var(--pinky-c3);
+  line-height: 1.4;
+  border-radius: 15px;
+  padding: 10px;
+}
+.modal-coms .ant-modal-content {
+  padding: 15px 0;
+}
+.repondre {
+  display: flex;
+  gap: 15px;
+}
+.repondre span {
+  font-size: 14px;
+  cursor: pointer;
+  color: rgb(92, 92, 92);
+  transition: 0.5s ease;
+}
+.repondre span:hover {
+  color: var(--tiktok);
+}
+.footer-input {
+  display: flex;
+  bottom: 0;
+  align-items: center;
+  width: 100%;
+  gap: 12px;
+  padding: 15px;
+  padding-bottom: 0;
+}
+.footer-input input {
+  padding: 10px;
+  border: none;
+  width: 100%;
+  background: #ffedeb;
+  border-radius: 5px;
+}
+.footer-input input:focus {
+  outline: none;
+}
+.footer-input .icon {
+  width: 27px;
+  height: 27px;
+  cursor: pointer;
+}

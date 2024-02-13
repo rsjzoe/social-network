@@ -5,12 +5,12 @@
     background: #fff;
     position: relative;
   }
-  .story-translate{
+  .story-translate {
     display: flex;
     gap: 18px;
     transition: 0.4s ease;
   }
-  .story-container .chevron{
+  .story-container .chevron {
     width: 25px;
     height: 25px;
     cursor: pointer;
@@ -20,11 +20,11 @@
     top: 51px;
     position: absolute;
   }
-  .chevron.left{
+  .chevron.left {
     left: 10px;
   }
-  
-  .chevron.right{
+
+  .chevron.right {
     right: 5px;
   }
   .story {
@@ -47,7 +47,30 @@
     background: linear-gradient(#de3fd4, #ffca35);
     padding: 2px;
   }
-  .story .name{
+  .story .name {
     font-size: 15.5px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .story-translate {
+    gap: 10px !important;
+  }
+}
+@media screen and (max-width: 659px) {
+  .story .name {
+    font-size: 14px !important;
+  }
+  .story .image {
+    width: 55px !important;
+    height: 55px !important;
+  }
+  .story-container {
+    padding: 17px !important;
+  }
+  .story-container .chevron {
+    top: 45px !important;
+    width: 21px !important;
+    height: 21px !important;
   }
 }

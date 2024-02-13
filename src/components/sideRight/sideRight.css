@@ -1,58 +1,64 @@
 /*------side-right---------*/
-.side-right{
-.side-right-fixed {
-  background: #fff;
-  border-radius: 10px;
-  position: fixed;
-  width: 22%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding: 15px;
-}
+.side-right {
+  .side-right-fixed {
+    background: #fff;
+    border-radius: 10px;
+    position: fixed;
+    width: 22%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px;
+  }
+  .head {
+    display: flex;
+    justify-content: space-between;
+  }
 
-.head span {
-font-size: 19px;
-font-weight: bold;
+  .head .sug {
+    font-size: 19px;
+    font-weight: bold;
+  }
+
+  .sugg-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .sugg-container span {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  #encore-plus {
+    color: var(--tiktok);
+    cursor: pointer;
+    font-size: 15px;
+  }
+  .sugg-container p {
+    margin-left: -5px;
+    font-size: 12px;
+  }
+  .sugg-container img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  .sugg-container button {
+    width: 55px;
+    height: 32px;
+    color: #fff;
+    padding: 5px;
+    font-style: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    background: var(--tiktok);
+    transition: 0.5s ease;
+  }
+  .sugg-container button:hover {
+    color: var(--tiktok);
+    background: #fff;
+    border: 1px solid var(--tiktok);
+  }
 }
-/* .head p{
-  color: var(--tiktok);
-  font-weight: 600;
-} */
-.sugg-container {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-.sugg-container span {
-  font-size: 14px;
-  font-weight: bold;
-}
-.sugg-container p {
-  margin-left: -5px;
-  font-size: 12px;
-}
-.sugg-container img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-}
-.sugg-container button {
-  width: 55px;
-  height: 32px;
-  color: #fff;
-  padding: 5px;
-  font-style: 15px;
-  cursor: pointer;
-  border-radius: 10px;
-  border: none;
-  background: var(--tiktok);
-  transition: 0.5s ease;
-}
-.sugg-container button:hover {
-  color: var(--tiktok);
-  background: #fff;
-  border: 1px solid var(--tiktok);
-}
-} 

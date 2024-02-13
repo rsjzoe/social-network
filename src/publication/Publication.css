@@ -72,3 +72,23 @@
     cursor: pointer;
   }
 }
+@media screen and (max-width: 659px) {
+  .publication p {
+    font-size: 14px !important;
+  }
+  .user-pub span {
+    font-size: 15px !important;
+  }
+  .sary-user {
+    width: 55px !important;
+    height: 55px !important;
+  }
+  .action img {
+    width: 20px !important ;
+    height: 20px !important;
+  }
+  .save {
+    width: 25px !important ;
+    height: 25px !important;
+  }
+}

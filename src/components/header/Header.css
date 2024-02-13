@@ -15,11 +15,11 @@
     display: flex;
     align-items: center;
   }
-  .brand p{
+  .brand p {
     font-size: 21px;
     font-weight: bold;
   }
-  .brand p span{
+  .brand p span {
     color: var(--tiktok);
   }
   .logo {
@@ -32,7 +32,7 @@
     justify-content: space-between;
     gap: 115px;
   }
-  .nav-item{
+  .nav-item {
     position: relative;
   }
   .nav-item img {
@@ -59,7 +59,7 @@
     height: 55px;
     border-radius: 50%;
   }
-  .notif{
+  .notif {
     position: absolute;
     left: 19px;
     color: #fff;
@@ -72,9 +72,43 @@
     text-align: center;
   }
 
-  .side-notification{
+  .side-notification {
     box-shadow: none;
     width: 320px;
   }
-  
+}
+@media screen and (max-width: 900px) {
+  .nav-bar {
+    gap: 60px !important;
+  }
+  .nav-item img {
+    width: 25px !important;
+    height: 25px !important;
+  }
+  .notif {
+    width: 17px !important;
+    height: 17px !important;
+    font-size: 10px !important;
+  }
+}
+@media screen and (max-width: 750px) {
+  .home .nav-bar {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 659px) {
+  .profil img {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  .brand .logo {
+    width: 65px !important;
+    height: 55px !important;
+  }
+  .brand p {
+    font-size: 20px !important;
+  }
+  .profil p {
+    font-size: 14px !important;
+  }
 }

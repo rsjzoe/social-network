@@ -6,7 +6,8 @@ export function SideRight(props) {
       <div className="side-right">
         <div className="side-right-fixed">
           <div className="head">
-              <span>suggestion</span>
+            <span className="sug">suggestion</span>
+            <span id="encore-plus">more</span>
           </div>
           <div className="sugg-container">
             <img src="image/photo4.png" alt="" />

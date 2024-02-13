@@ -28,12 +28,13 @@ export function PostUser(props) {
         </div>
 
         <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae atque
-          assumenda soluta quam quod ullam cupiditate eius, aut nulla eum
-          aliquid id velit{":))"}
+          RATA-TWO-ILLE!! <br />
+          Get ready for a delictable adventure in "ratatouille", the enchanting
+          Disney-Pixar sequel to ratatouille! Join Remy and Linguin as they navigate the 
+          culinary world...
         </p>
 
-        <img src="image/photo3.png" alt="" className="img-pub" />
+        <img src="image/ratatouille2.jpg" alt="" className="img-pub" />
         <div className="footer-pub">
           <div className="action-container">
             <div className="action">
@@ -59,7 +60,7 @@ export function PostUser(props) {
             </div>
           </div>
           <img
-            src={isSaved ?  "bookmark-svgrepo-com.svg" : "save-svgrepo-com.svg" }
+            src={isSaved ? "bookmark-svgrepo-com.svg" : "save-svgrepo-com.svg"}
             alt=""
             className="save"
             onClick={() => {

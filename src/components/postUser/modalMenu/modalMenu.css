@@ -1,0 +1,27 @@
+.List-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 15px;
+}
+
+.modal-menue .ant-modal-content {
+  padding: 10px 0 !important;
+  width: 75%;
+}
+.List-menu span {
+  border-bottom: 1px solid #e0dbdb;
+  padding: 15px;
+  width: 100%;
+  color: rgb(20, 18, 18);
+  display: flex;
+  font-weight: 670;
+  justify-content: center;
+}
+.List-menu .cancel {
+  border-bottom: none;
+  color: var(--tiktok);
+}
+.List-menu span:hover {
+  background: var(--pinky-c2);
+}

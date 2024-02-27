@@ -16,7 +16,6 @@ export default function App() {
         id="container"
       >
         <SeConnecter
-          age="10"
           onclick={() => {
             setCreate(true);
           }}

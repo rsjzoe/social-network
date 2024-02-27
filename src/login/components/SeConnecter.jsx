@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export function SeConnecter({ age, onclick }) {
+export function SeConnecter({onclick }) {
   return (
     <>
       <div className="form-container sign-in-container">

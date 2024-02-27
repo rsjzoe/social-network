@@ -7,7 +7,7 @@
   }
   .story-translate {
     display: flex;
-    gap: 18px;
+    gap: 15.5px;
     transition: 0.4s ease;
   }
   .story-container .chevron {
@@ -55,6 +55,16 @@
 @media screen and (max-width: 900px) {
   .story-translate {
     gap: 10px !important;
+  }
+  .story-container {
+    padding: 15px !important;
+  }
+  .story .name {
+    font-size: 14.5px !important;
+  }
+  .story .image {
+    width: 62px !important;
+    height: 62px !important;
   }
 }
 @media screen and (max-width: 659px) {

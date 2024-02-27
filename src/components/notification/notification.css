@@ -42,7 +42,6 @@
 .notif-container button {
   width: 55px;
   height: 32px;
-  /* color: #fff; */
   padding: 5px;
   cursor: pointer;
   border-radius: 10px;
@@ -50,14 +49,16 @@
   border: 1px solid var(--tiktok);
   color: var(--tiktok);
   background: #fff;
-
-  /* background: var(--tiktok); */
   transition: 0.5s ease;
 }
 .notif-container button:hover {
-  /* color: var(--tiktok); */
   color: #fff;
   background: var(--tiktok);
-  /* background: #fff; */
-  /* border: 1px solid var(--tiktok); */
+}
+@media screen and (max-width: 900px) {
+  .notif-container button {
+    width: 50px !important;
+    height: 30px !important;
+    font-size: 12px !important;
+  }
 }

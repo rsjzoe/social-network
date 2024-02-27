@@ -138,3 +138,35 @@
     opacity: 1;
   }
 }
+@media screen and (max-width: 900px) {
+  .head {
+    padding: 8px !important;
+  }
+  .user-head {
+    width: 57px !important;
+    height: 57px !important;
+  }
+  .head span {
+    font-size: 17px !important;
+  }
+  .chevron {
+    width: 25px !important;
+    height: 25px !important;
+  }
+  .chat-item.me .text {
+    font-size: 14.6px !important;
+  }
+  .chat-item .text {
+    font-size: 14.5px !important;
+    padding: 8px !important;
+  }
+}
+@media screen and (max-width: 659px) {
+  .chat-item.me .text {
+    font-size: 13.5px !important;
+  }
+  .chat-item .text {
+    font-size: 13.5px !important;
+    padding: 8px !important;
+  }
+}

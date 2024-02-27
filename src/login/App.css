@@ -74,23 +74,6 @@
     margin: 8px 0;
     width: 100%;
   }
-  /* input{
-        width: 100%;
-        padding: 12px 15px;
-        background-color: #f3f3f3;
-        border: none;
-        outline: none;
-    } */
-  /* label{
-        position: absolute;
-        left: 50%;
-        top: 100%;
-        transform: translateX(-50%);
-        width: 0%;
-        height: 2px;
-        background: var(--grad-c1);
-        transition: 0.3s;
-    } */
   a {
     color: #333;
     font-size: 14px;

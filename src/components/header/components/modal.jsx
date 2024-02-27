@@ -37,6 +37,7 @@ const ModalPublication = ({ isOpen, handleCancel }) => {
           </Button>,
         ]}
         centered
+        className="modal-create-pub"
       >
         <div className="create-pub">
           <TextArea rows={4} placeholder="Write Legends..." />

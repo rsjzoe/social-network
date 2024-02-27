@@ -92,3 +92,15 @@
     height: 25px !important;
   }
 }
+@media screen and (max-width: 900px) {
+  .user-pub span {
+    font-size: 14.5px;
+  }
+  .user-pub .sary-user {
+    width: 60px !important;
+    height: 60px !important;
+  }
+  .publication p {
+    font-size: 14.5px !important;
+  }
+}

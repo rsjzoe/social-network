@@ -28,13 +28,12 @@ export function PostUser(props) {
         </div>
 
         <p>
-          RATA-TWO-ILLE!! <br />
-          Get ready for a delictable adventure in "ratatouille", the enchanting
-          Disney-Pixar sequel to ratatouille! Join Remy and Linguin as they navigate the 
-          culinary world...
+          ICE-CREAM <br />
+          blackpink 'Ice Cream' official dance Performance video is OUT-NOW!
+          check out selpink's first ever Performance in zepeto...
         </p>
 
-        <img src="image/ratatouille2.jpg" alt="" className="img-pub" />
+        <img src="image/blackpink.jpg" alt="" className="img-pub" />
         <div className="footer-pub">
           <div className="action-container">
             <div className="action">

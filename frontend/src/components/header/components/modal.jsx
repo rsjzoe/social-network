@@ -3,7 +3,7 @@ import { Button, Modal } from "antd";
 import { Input } from "antd";
 import { UploadOutlined } from "@ant-design/icons";
 import { message, Upload } from "antd";
-import './modal.css'
+import "./modal.css";
 
 const { TextArea } = Input;
 const props = {
@@ -25,6 +25,21 @@ const props = {
 };
 
 const ModalPublication = ({ isOpen, handleCancel }) => {
+  const [content, setContent] = useState("");
+  async function onShare() {
+    const response = await fetch("http://localhost:3000/publications", {
+      method: "post",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ title: "", content: content, userId: 3 }),
+    });
+    if (response.ok) {
+      handleCancel();
+      location.reload()
+    }
+  }
+
   return (
     <>
       <Modal
@@ -32,7 +47,7 @@ const ModalPublication = ({ isOpen, handleCancel }) => {
         open={isOpen}
         onCancel={handleCancel}
         footer={[
-          <Button key="submit" type="primary" style={{ width: "100%" }}>
+          <Button key="submit" type="primary" style={{ width: "100%" }} onClick={onShare}>
             Share
           </Button>,
         ]}
@@ -40,7 +55,12 @@ const ModalPublication = ({ isOpen, handleCancel }) => {
         className="modal-create-pub"
       >
         <div className="create-pub">
-          <TextArea rows={4} placeholder="Write Legends..." />
+          <TextArea
+            rows={4}
+            placeholder="Write Legends..."
+            value={content}
+            onChange={(e) => setContent(e.currentTarget.value)}
+          />
           <Upload {...props}>
             <Button icon={<UploadOutlined />}>Click to Upload</Button>
           </Upload>

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import ModalMenu from "./modalMenu/modalMenu";
 import ModalComs from "./modalComments/modalComs";
 
-export function PostUser(props) {
+export function PostUser({ publication }) {
   const [isLiked, setIsLiked] = useState(false);
   const [isSaved, setIsSaved] = useState(false);
   const [isModalMenu, setIsModalMenu] = useState(false);
@@ -15,7 +15,7 @@ export function PostUser(props) {
         <div className="head-pub">
           <Link to={"/otherUser"} className="user-pub">
             <img src="image/photo3.png" alt="" className="sary-user" />
-            <span>lalalalisa_m</span>
+            <span>{publication.user.name}</span>
             <img src="check-badge-svgrepo-com.svg" alt="" className="badge" />
             <span className="times">. 1d</span>
           </Link>
@@ -28,9 +28,10 @@ export function PostUser(props) {
         </div>
 
         <p>
-          ICE-CREAM <br />
-          blackpink 'Ice Cream' official dance Performance video is OUT-NOW!
-          check out selpink's first ever Performance in zepeto...
+          {publication.title}<br />
+          {publication.content}
+          {/* blackpink 'Ice Cream' official dance Performance video is OUT-NOW!
+          check out selpink's first ever Performance in zepeto... */}
         </p>
 
         <img src="image/blackpink.jpg" alt="" className="img-pub" />

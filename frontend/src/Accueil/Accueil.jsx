@@ -5,7 +5,7 @@ export function Accueil(props) {
   return (
     <>
       <ListStory />
-      <Publication />
+      <Publication/>
     </>
   );
 }

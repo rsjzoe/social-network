@@ -14,18 +14,20 @@ datasource db {
 }
 
 model User {
-  id    Int    @id @default(autoincrement())
-  email String @unique
-  name  String
-  publications Publication[]
+  id                Int           @id @default(autoincrement())
+  email             String        @unique
+  name              String
+  publications      Publication[] @relation(name: "PostedPublications")
+  publicationsLiked Publication[] @relation(name: "PublicationsLiked")
 }
 
 model Publication {
-  id      Int    @id @default(autoincrement())
-  title   String
-  content String
-  imageUrl String?
-  user User @relation(fields: [userId], references: [id])
-  userId Int
-  createdAt DateTime @default(now())
+  id           Int      @id @default(autoincrement())
+  title        String
+  content      String
+  imageUrl     String?
+  user         User     @relation(name: "PostedPublications", fields: [userId], references: [id])
+  userId       Int
+  createdAt    DateTime @default(now())
+  likedByUsers User[]   @relation(name: "PublicationsLiked")
 }

@@ -28,13 +28,18 @@ export function PostUser({ publication }) {
         </div>
 
         <p>
-          {publication.title}<br />
           {publication.content}
           {/* blackpink 'Ice Cream' official dance Performance video is OUT-NOW!
           check out selpink's first ever Performance in zepeto... */}
         </p>
+        {publication.imageUrl && (
+          <img
+            src={`http://localhost:3000/posts/${publication.imageUrl}`}
+            alt=""
+            className="img-pub"
+          />
+        )}
 
-        <img src="image/blackpink.jpg" alt="" className="img-pub" />
         <div className="footer-pub">
           <div className="action-container">
             <div className="action">

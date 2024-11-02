@@ -74,6 +74,7 @@ export function PostUser({ publication }) {
         modalMenuCancel={() => {
           setIsModalMenu(false);
         }}
+        publication={publication}
       />
       <ModalComs
         isModalcomsOpen={isModalComs}

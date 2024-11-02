@@ -19,8 +19,8 @@ const upload = multer({ storage: storage });
 
 publicationRouteur.get("/publications", async (req, res) => {
   let publications = await prisma.publication.findMany({
-    include: { user: true },
-    orderBy: {createdAt:"asc"}
+    include: { user: true, likedByUsers: true },
+    orderBy: { createdAt: "asc" },
   });
   res.send(publications);
 });
@@ -51,5 +51,31 @@ publicationRouteur.put("/publications/:id", async (req, res) => {
 publicationRouteur.delete("/publications/:id", async (req, res) => {
   let id = Number(req.params.id);
   let publications = await prisma.publication.delete({ where: { id } });
+  res.send(publications);
+});
+
+publicationRouteur.put("/like", async (req, res) => {
+  let { userId, publicationId } = req.body;
+  let publications = await prisma.publication.update({
+    where: { id: publicationId },
+    data: {
+      likedByUsers: {
+        connect: { id: userId },
+      },
+    },
+  });
+  res.send(publications);
+});
+
+publicationRouteur.put("/dislike", async (req, res) => {
+  let { userId, publicationId } = req.body;
+  let publications = await prisma.publication.update({
+    where: { id: publicationId },
+    data: {
+      likedByUsers: {
+        disconnect: { id: userId },
+      },
+    },
+  });
   res.send(publications);
 });

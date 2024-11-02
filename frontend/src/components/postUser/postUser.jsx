@@ -2,12 +2,18 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import ModalMenu from "./modalMenu/modalMenu";
 import ModalComs from "./modalComments/modalComs";
+import { dislike, like } from "./post.helper";
 
 export function PostUser({ publication }) {
-  const [isLiked, setIsLiked] = useState(false);
+  const [isLiked, setIsLiked] = useState(
+    Boolean(publication.likedByUsers.find((user) => user.id == 3))
+  );
   const [isSaved, setIsSaved] = useState(false);
   const [isModalMenu, setIsModalMenu] = useState(false);
   const [isModalComs, setIsModalComs] = useState(false);
+  const [likeCompteur, setLikeCompteur] = useState(
+    publication.likedByUsers.length
+  );
 
   return (
     <>
@@ -46,11 +52,19 @@ export function PostUser({ publication }) {
               <img
                 src={isLiked ? "heart2.svg" : "heart-svgrepo-com.svg"}
                 alt=""
-                onClick={() => {
+                onClick={async () => {
+                  if (isLiked) {
+                    await dislike(3, publication.id);
+                  } else {
+                    await like(3, publication.id);
+                  }
                   setIsLiked(!isLiked);
+                  setLikeCompteur(
+                    isLiked ? likeCompteur - 1 : likeCompteur + 1
+                  );
                 }}
               />
-              <span>3M</span>
+              <span>{likeCompteur}</span>
             </div>
             <div className="action">
               <img

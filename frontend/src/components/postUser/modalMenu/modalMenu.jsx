@@ -1,7 +1,16 @@
 import React, { useState } from "react";
 import { Modal } from "antd";
 import "./modalMenu.css";
-const ModalMenu = ({ isModalMenuOpen, modalMenuCancel }) => {
+const ModalMenu = ({ isModalMenuOpen, modalMenuCancel, publication }) => {
+  async function onDelete(id) {
+    let response = await fetch(`http://localhost:3000/publications/${id}`, {
+      method: "delete",
+    });
+    if (response.ok) {
+      location.reload()
+    }
+  }
+
   return (
     <>
       <div className="modal-menu">
@@ -15,7 +24,13 @@ const ModalMenu = ({ isModalMenuOpen, modalMenuCancel }) => {
         >
           <div className="List-menu">
             <span>Unfollow</span>
-            <span>Report</span>
+            <span
+              onClick={() => {
+                onDelete(publication.id);
+              }}
+            >
+              Delete
+            </span>
             <span>Share to...</span>
             <span>Copy Link</span>
             <span className="cancel">Cancel</span>

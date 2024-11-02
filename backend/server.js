@@ -3,12 +3,13 @@ import express from "express";
 import path from "path";
 import { userRouteur } from "./src/users.js";
 import { publicationRouteur } from "./src/publication.js";
-import cors from "cors"
+import cors from "cors";
 
 const app = express();
 const prisma = new PrismaClient();
 app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static("public"));
 app.use(express.json());
 app.use(cors());
 

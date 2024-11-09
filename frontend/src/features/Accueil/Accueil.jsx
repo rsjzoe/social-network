@@ -4,7 +4,7 @@ import { useUser } from "../auth/useUser";
 
 export function Accueil(props) {
   const context = useUser()
-  console.log(context);
+  // console.log(context);
   
   return (
     <>

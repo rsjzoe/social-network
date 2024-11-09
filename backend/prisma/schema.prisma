@@ -17,6 +17,7 @@ model User {
   id                Int           @id @default(autoincrement())
   email             String        @unique
   name              String
+  password          String
   publications      Publication[] @relation(name: "PostedPublications")
   publicationsLiked Publication[] @relation(name: "PublicationsLiked")
 }

@@ -4,6 +4,8 @@ import path from "path";
 import { userRouteur } from "./src/users.js";
 import { publicationRouteur } from "./src/publication.js";
 import cors from "cors";
+import session from "express-session";
+import { authRouteur } from "./src/auth.js";
 
 const app = express();
 const prisma = new PrismaClient();
@@ -11,7 +13,17 @@ app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.use(express.json());
-app.use(cors());
+app.use(cors({ origin: "http://localhost:5173", credentials: true }));
+app.use(
+  session({
+    secret: process.env.SECRET_KEY,
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+      maxAge: 1000 * 60 * 60 * 24, // Expiration de 1 jour
+    },
+  })
+);
 
 app.get("/", (req, res) => {
   // maka donnees anaty base de donnees
@@ -29,6 +41,7 @@ app.get("/", (req, res) => {
 
 app.use(userRouteur);
 app.use(publicationRouteur);
+app.use(authRouteur);
 
 // app.get("/chat", (req, res) => {
 //   let tab = [

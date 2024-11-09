@@ -1,4 +1,3 @@
-import {PostUser} from "../../components/postUser/postUser"
 import { PageProfil } from "../components/pageProfil";
 import "../profil.css";
 

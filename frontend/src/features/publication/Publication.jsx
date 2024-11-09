@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { PostUser } from "../components/postUser/postUser";
+import { PostUser } from "../../components/postUser/postUser";
 import "./Publication.css";
-import { serverUrl } from "../constants";
+import { serverUrl } from "../../constants";
 
 export function Publication(props) {
   const [posts, setPosts] = useState([]);

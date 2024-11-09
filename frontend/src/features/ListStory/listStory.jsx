@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Story } from "../components/story/Story";
+import { Story } from "../../components/story/Story";
 
 export function ListStory(props) {
   const [translate, setTranslate] = useState(0);

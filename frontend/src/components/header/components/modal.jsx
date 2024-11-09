@@ -4,12 +4,14 @@ import { Input } from "antd";
 import { message, Upload } from "antd";
 import "./modal.css";
 import { serverUrl } from "../../../constants";
+import { useUser } from "../../../features/auth/useUser";
 
 const { TextArea } = Input;
 
 const ModalPublication = ({ isOpen, handleCancel }) => {
   const [content, setContent] = useState("");
   const [file, setFile] = useState(null);
+  const { user } = useUser();
 
   async function onShare() {
     if (content.length == 0 || file == null) return;
@@ -17,7 +19,7 @@ const ModalPublication = ({ isOpen, handleCancel }) => {
     formData.append("file", file);
     formData.append("title", "");
     formData.append("content", content);
-    formData.append("userId", 3);
+    formData.append("userId", user.id);
 
     const response = await fetch(`${serverUrl}/publications`, {
       method: "post",

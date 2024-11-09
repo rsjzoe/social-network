@@ -4,12 +4,14 @@ import ModalPublication from "./components/modal";
 import "./Header.css";
 import Notification from "../notification/notification";
 import { Link } from "react-router-dom";
+import { useUser } from "../../features/auth/useUser";
 
 export function Header(props) {
   const [navActive, setNavActive] = useState("home");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [open, setOpen] = useState(false);
-  
+  const { user } = useUser();
+
   return (
     <>
       <header className="">
@@ -55,7 +57,7 @@ export function Header(props) {
 
         <Link to={"profil"} className="profil">
           <span>
-            <p>Rsj_zoe</p>
+            <p>{user.name}</p>
             <img src="/image/phone.png" alt="" />
           </span>
         </Link>

@@ -14,7 +14,7 @@ export function ProfilOther(props) {
         btn1={"follow(s)"}
         btn2={"message"}
       />
-      <PostUser />
+      {/* <PostUser /> */}
     </>
   );
 }

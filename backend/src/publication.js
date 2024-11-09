@@ -20,8 +20,10 @@ const upload = multer({ storage: storage });
 publicationRouteur.get("/publications", async (req, res) => {
   let publications = await prisma.publication.findMany({
     include: { user: true, likedByUsers: true },
-    orderBy: { createdAt: "asc" },
+    orderBy: { createdAt: "desc" },
   });
+  console.log(publications);
+  
   res.send(publications);
 });
 

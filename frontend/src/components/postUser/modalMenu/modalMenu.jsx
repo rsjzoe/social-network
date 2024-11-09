@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { Modal } from "antd";
 import "./modalMenu.css";
+import { serverUrl } from "../../../constants";
 const ModalMenu = ({ isModalMenuOpen, modalMenuCancel, publication }) => {
   async function onDelete(id) {
-    let response = await fetch(`http://localhost:3000/publications/${id}`, {
+    let response = await fetch(`${serverUrl}/publications/${id}`, {
       method: "delete",
     });
     if (response.ok) {

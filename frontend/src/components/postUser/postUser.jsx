@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import ModalMenu from "./modalMenu/modalMenu";
 import ModalComs from "./modalComments/modalComs";
 import { dislike, like } from "./post.helper";
+import { serverUrl } from "../../constants";
 
 export function PostUser({ publication }) {
   const [isLiked, setIsLiked] = useState(
@@ -40,7 +41,7 @@ export function PostUser({ publication }) {
         </p>
         {publication.imageUrl && (
           <img
-            src={`http://localhost:3000/posts/${publication.imageUrl}`}
+            src={`${serverUrl}/posts/${publication.imageUrl}`}
             alt=""
             className="img-pub"
           />

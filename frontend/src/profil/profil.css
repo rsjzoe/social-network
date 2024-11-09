@@ -80,6 +80,7 @@
   }
 }
 @media screen and (max-width: 659px) {
+
   .button-container button {
     width: 150px !important;
     height: 32px !important;
@@ -112,14 +113,19 @@
     height: 65px !important;
   }
 }
+
+
 @media screen and (max-width: 510px) {
+  .container-detail{
+    
+  }
   .button-container button {
     width: 95px !important;
     height: 28px !important;
   }
   .user-photo-profil img {
-    height: 84px !important;
-    width: 84px !important;
+    height: 75px !important;
+    width: 75px !important;
   }
   .detail-user-profil {
     font-size: 14.5px !important;
@@ -144,7 +150,10 @@
     width: 57px !important;
     height: 57px !important;
   }
+  .head-profil{
+    gap: 15px !important;
+  }
   .container-detail {
-    gap: 25px !important;
+    gap: 8px !important;
   }
 }

@@ -1,5 +1,7 @@
+import { serverUrl } from "../../constants";
+
 export async function like(userId, publicationId) {
-  await fetch("http://localhost:3000/like", {
+  await fetch(`${serverUrl}/like`, {
     method: "put",
     headers: {
       "Content-Type": "application/json",
@@ -12,7 +14,7 @@ export async function like(userId, publicationId) {
 }
 
 export async function dislike(userId, publicationId) {
-    await fetch("http://localhost:3000/dislike", {
+    await fetch(`${serverUrl}/dislike`, {
       method: "put",
       headers: {
         "Content-Type": "application/json",

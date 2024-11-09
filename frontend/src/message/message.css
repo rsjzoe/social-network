@@ -31,6 +31,7 @@
     text-overflow: ellipsis;
     overflow: hidden;
     padding: 6px;
+    padding-left: 0;
     text-decoration: none;
   }
   .name-user p {
@@ -78,6 +79,9 @@
 }
 
 @media screen and (max-width: 659px) {
+  .messages{
+    padding: 15px;
+  }
   .list-messages {
     margin-top: 9px !important;
   }

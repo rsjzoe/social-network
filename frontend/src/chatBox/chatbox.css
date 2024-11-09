@@ -162,6 +162,13 @@
   }
 }
 @media screen and (max-width: 659px) {
+  .chatBox{
+    position: absolute;
+    top: 0;
+    z-index: 9999;
+    left: 0;
+    height: 100%;
+  }
   .chat-item.me .text {
     font-size: 13.5px !important;
   }

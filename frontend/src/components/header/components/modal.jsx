@@ -3,6 +3,7 @@ import { Button, Modal } from "antd";
 import { Input } from "antd";
 import { message, Upload } from "antd";
 import "./modal.css";
+import { serverUrl } from "../../../constants";
 
 const { TextArea } = Input;
 
@@ -18,7 +19,7 @@ const ModalPublication = ({ isOpen, handleCancel }) => {
     formData.append("content", content);
     formData.append("userId", 3);
 
-    const response = await fetch("http://localhost:3000/publications", {
+    const response = await fetch(`${serverUrl}/publications`, {
       method: "post",
       body: formData,
     });

@@ -22,8 +22,6 @@ publicationRouteur.get("/publications", async (req, res) => {
     include: { user: true, likedByUsers: true },
     orderBy: { createdAt: "desc" },
   });
-  console.log(publications);
-  
   res.send(publications);
 });
 

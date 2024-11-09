@@ -1,14 +1,14 @@
 import * as React from "react";
-import App from "./login/App";
+import App from "./features/login/App";
 import * as ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import { Layout } from "./components/layout/layout";
-import { Accueil } from "./Accueil/Accueil";
-import { Message } from "./message/message";
-import {Profil} from "./profil/profil";
-import { Chatbox } from "./chatBox/chatbox";
-import { ProfilOther } from "./profil/otherUser/profilOther";
+import { Accueil } from "./features/Accueil/Accueil";
+import { Message } from "./features/message/message";
+import { Profil } from "./features/profil/profil";
+import { Chatbox } from "./features/chatBox/chatbox";
+import { ProfilOther } from "./features/profil/otherUser/profilOther";
 
 export const route = createBrowserRouter([
   {
@@ -21,21 +21,20 @@ export const route = createBrowserRouter([
       },
       {
         path: "message",
-        element: <Message/>,
+        element: <Message />,
       },
       {
         path: "chatBox",
-        element: <Chatbox/>
+        element: <Chatbox />,
       },
       {
         path: "profil",
-        element: <Profil/>
+        element: <Profil />,
       },
       {
         path: "otherUser",
-        element: <ProfilOther/>
-      }
-
+        element: <ProfilOther />,
+      },
     ],
   },
   {

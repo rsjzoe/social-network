@@ -1,10 +1,38 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { serverUrl } from "../../../constants";
 
-export function SeConnecter({onclick }) {
+export function SeConnecter({ onclick }) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+  const navigate = useNavigate();
+
+  const onLogin = async () => {
+    setErrorMessage("");
+
+    const response = await fetch(`${serverUrl}/login`, {
+      method: "post",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, password }),
+    });
+    if (response.ok) {
+      return navigate("/");
+    }
+    setErrorMessage("email ou password oublié");
+  };
+
   return (
     <>
       <div className="form-container sign-in-container">
-        <form>
+        <form
+          method="post"
+          onSubmit={(e) => {
+            e.preventDefault();
+
+            onLogin();
+          }}
+        >
           <h1>Login Now</h1>
           <div className="social-container">
             <a href="#" className="social">
@@ -25,12 +53,20 @@ export function SeConnecter({onclick }) {
                 type="email"
                 placeholder="Email"
                 name="email"
+                value={email}
+                onChange={(e) => setEmail(e.currentTarget.value)}
                 className="input"
               />
             </div>
             <div className="input-container">
               <img className="icon" src="lock.svg" />
-              <input type="password" placeholder="Password" className="input" />
+              <input
+                type="password"
+                placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.currentTarget.value)}
+                className="input"
+              />
             </div>
           </div>
           <div className="action">
@@ -46,10 +82,12 @@ export function SeConnecter({onclick }) {
               Create account
             </span>
           </div>
-
-          <Link to="/">
-            <button type="button">Login</button>
-          </Link>
+          {errorMessage && (
+            <div className="">
+              <span>{errorMessage}</span>
+            </div>
+          )}
+          <button type="submit">Login</button>
         </form>
       </div>
     </>

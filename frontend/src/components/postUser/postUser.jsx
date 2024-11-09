@@ -4,10 +4,12 @@ import ModalMenu from "./modalMenu/modalMenu";
 import ModalComs from "./modalComments/modalComs";
 import { dislike, like } from "./post.helper";
 import { serverUrl } from "../../constants";
+import { useUser } from "../../features/auth/useUser";
 
 export function PostUser({ publication }) {
+  const {user} = useUser()
   const [isLiked, setIsLiked] = useState(
-    Boolean(publication.likedByUsers.find((user) => user.id == 3))
+    Boolean(publication.likedByUsers.find((currentUser) => currentUser.id == user.id))
   );
   const [isSaved, setIsSaved] = useState(false);
   const [isModalMenu, setIsModalMenu] = useState(false);
@@ -15,6 +17,7 @@ export function PostUser({ publication }) {
   const [likeCompteur, setLikeCompteur] = useState(
     publication.likedByUsers.length
   );
+  
 
   return (
     <>
@@ -55,9 +58,9 @@ export function PostUser({ publication }) {
                 alt=""
                 onClick={async () => {
                   if (isLiked) {
-                    await dislike(3, publication.id);
+                    await dislike(user.id, publication.id);
                   } else {
-                    await like(3, publication.id);
+                    await like(user.id, publication.id);
                   }
                   setIsLiked(!isLiked);
                   setLikeCompteur(

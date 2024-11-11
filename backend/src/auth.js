@@ -39,18 +39,14 @@ authRouteur.post("/login", async (req, res) => {
   if (!validPassword) {
     return res.status(400).json({ message: "Mot de passe incorrect" });
   }
-
+  
   // Créer la session
   req.session.user = { id: user.id, email: user.email, name: user.name };
-  console.log(req.session.user);
-
   res.json({ message: "Connexion réussie", user: req.session.user });
 });
 
 // Route pour récupérer l'utilisateur actuel
 authRouteur.get("/me", (req, res) => {
-  console.log(req.session.user);
-
   if (req.session.user) {
     res.json(req.session.user);
   } else {

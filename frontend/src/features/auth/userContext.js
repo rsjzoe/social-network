@@ -5,4 +5,5 @@ export const UserContext = createContext({
   status: "inconnu", // inconnu | connecté | non  connecté
   setStatus: (status) => {},
   setUser: (user) => {},
+  fetchUser: async () => {},
 });

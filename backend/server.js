@@ -1,6 +1,5 @@
 import { PrismaClient } from "@prisma/client";
 import express from "express";
-import path from "path";
 import { userRouteur } from "./src/users.js";
 import { publicationRouteur } from "./src/publication.js";
 import cors from "cors";
@@ -16,11 +15,11 @@ app.use(express.json());
 app.use(cors({ origin: "http://localhost:5173", credentials: true }));
 app.use(
   session({
-    secret: process.env.SECRET_KEY,
+    secret: process.env.SECRET_KEY || "examplekey",
     resave: false,
     saveUninitialized: false,
     cookie: {
-      maxAge: 1000 * 60 * 60 * 24, // Expiration de 1 jour
+      maxAge: 1000 * 60 * 60 * 24, // Expiration de 1 jour, 
     },
   })
 );

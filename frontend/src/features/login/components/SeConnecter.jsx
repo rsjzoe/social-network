@@ -1,12 +1,14 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { serverUrl } from "../../../constants";
+import { useUser } from "../../auth/useUser";
 
 export function SeConnecter({ onclick }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const navigate = useNavigate();
+  const { fetchUser } = useUser();
 
   const onLogin = async () => {
     setErrorMessage("");
@@ -15,8 +17,10 @@ export function SeConnecter({ onclick }) {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password }),
+      credentials: 'include'
     });
     if (response.ok) {
+      await fetchUser();
       return navigate("/");
     }
     setErrorMessage("email ou password oublié");

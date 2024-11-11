@@ -1,4 +1,4 @@
-import "./SideRight.css";
+import "./sideRight.css";
 
 export function SideRight(props) {
   return (

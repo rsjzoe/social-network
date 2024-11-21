@@ -79,7 +79,7 @@ export function PostUser({ publication }) {
                   setIsModalComs(true);
                 }}
               />
-              <span>105</span>
+              <span>1</span>
             </div>
           </div>
           <img

@@ -24,7 +24,7 @@ export function SideLeft(props) {
           <Link to={"profil"} className="user">
             <div className="user-profil">
               <img src="image/phone.png" alt="" className="user-img" />
-              <span>roses_are_rosie</span>
+              <span>lalalisa</span>
             </div>
             <div className="follow-container">
               <div className="follow">

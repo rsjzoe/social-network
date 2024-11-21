@@ -17,6 +17,8 @@ export function UserProvider({ children }) {
       credentials: "include",
     });
     if (response.ok) {
+      const data = await response.json(); // ito le user
+      setUser(data);
       return setStatus("connecté");
     }
     setStatus("non connecté");

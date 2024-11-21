@@ -95,7 +95,7 @@ export function CreerCompte({ onclick }) {
           >
             Log in
           </span>
-          <button>Sing on</button>
+          <button>Sing up</button>
         </form>
       </div>
     </>
